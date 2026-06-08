@@ -1,0 +1,156 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff0f3;
+    color:#222;
+}
+
+header{
+    background:#f48fb1;
+    padding:15px;
+    text-align:center;
+}
+
+header h2{
+    margin:5px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:5px 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+main{
+    width:90%;
+    max-width:1000px;
+    margin:20px auto;
+}
+
+.caja{
+    background:white;
+    border:1px solid #ddd;
+    padding:18px;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+.aviso{
+    background:#fff8c6;
+}
+
+.boton, button{
+    background:#e75480;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+}
+
+button:hover, .boton:hover{
+    background:#c73d68;
+}
+
+.formulario label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:4px;
+    border:1px solid #aaa;
+    border-radius:4px;
+}
+
+.check{
+    font-weight:normal !important;
+}
+
+.contenedor-postres{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:15px;
+}
+
+.tarjeta{
+    border:1px solid #ccc;
+    padding:12px;
+    background:#fffafa;
+    border-radius:8px;
+    text-align:center;
+}
+
+.tarjeta img{
+    width:100%;
+    max-width:150px;
+    height:120px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+th, td{
+    border:1px solid #aaa;
+    padding:8px;
+    text-align:left;
+}
+
+th{
+    background:#f8bbd0;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#f48fb1;
+    color:white;
+    margin-top:25px;
+}
+
+.login{
+    max-width:450px;
+    margin:auto;
+}
+
+#mensajeLogin, #mensajePedido, #mensajeContacto{
+    font-weight:bold;
+}
+
+@media(max-width:800px){
+    .contenedor-postres{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    nav a{
+        display:block;
+        margin:8px;
+    }
+}
+
+@media(max-width:500px){
+    .contenedor-postres{
+        grid-template-columns:1fr;
+    }
+
+    main{
+        width:95%;
+    }
+}
