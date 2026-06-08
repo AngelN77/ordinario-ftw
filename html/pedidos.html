@@ -10,20 +10,20 @@
 
     <div id="menu"></div>
 
-    <h1>Pedidos</h1>
-    <p>Aqui se muestran pedidos de postres.</p>
+    <h1>Pedidos de postres</h1>
+    <p>En esta pagina puedes ver pedidos y agregar uno nuevo.</p>
 
     <h2>Agregar pedido</h2>
 
     <form id="formPedido">
-        <p>Nombre del cliente:</p>
-        <input type="text" id="nombreCliente">
+        <p>Cliente:</p>
+        <input type="text" id="cliente">
 
         <p>Postre:</p>
-        <input type="text" id="postrePedido">
+        <input type="text" id="postre">
 
         <p>Cantidad:</p>
-        <input type="number" id="cantidadPedido" min="1">
+        <input type="number" id="cantidad" min="1">
 
         <br><br>
         <button type="submit">Agregar</button>
@@ -32,7 +32,8 @@
     <p id="mensajePedido"></p>
 
     <h2>Filtrar pedidos</h2>
-    <select id="estadoPedido">
+
+    <select id="estado">
         <option value="todos">Todos</option>
         <option value="Pendiente">Pendiente</option>
         <option value="Entregado">Entregado</option>
@@ -54,7 +55,7 @@
 
     <div id="pie"></div>
 
-    <script src="../jvS/componentes.js"></script>
-    <script src="../jvS/app.js"></script>
+    <script src="../jvS/compontns.js"></script>
+    <script src="../jvS/pedidos.js"></script>
 </body>
-</html> 
+</html>

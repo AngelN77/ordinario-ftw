@@ -8,7 +8,16 @@ document.addEventListener("DOMContentLoaded", function(){
     if(pagina == "catalogo"){
         cargarPostres();
     }
+
+    if (pagina == "login"){
+        iniciarLogin();
+    }
+    if (pagina == "pedidos"){
+        iniciarpedidos();
+    }
 });
+
+
 
 var postresGuardados = [];
 
@@ -114,3 +123,58 @@ function filtrarPostres(){
 
     mostrarPostres(resultado);
 }
+
+
+function iniciarLogin(){
+    var formulario = document.getElementById("formLogin");
+    var mensaje = document.getElementById("mensajeLogin");
+
+    formulario.addEventListener("submit", function(evento){
+        evento.preventDefault();
+
+        var usuario = document.getElementById("usuario").value;
+        var password = document.getElementById("password").value;
+
+        fetch("../xml/usuarios.xml")
+        .then(function(respuesta){
+            return respuesta.text();
+        })
+        .then(function(datos){
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(datos, "text/xml");
+
+            var usuarios = xml.getElementsByTagName("usuario");
+
+            var encontrado = false;
+            var rol = "";
+
+            for(var i = 0; i < usuarios.length; i++){
+                var nombreXML = usuarios[i].getElementsByTagName("nombre")[0].textContent;
+                var passwordXML = usuarios[i].getElementsByTagName("password")[0].textContent;
+                var rolXML = usuarios[i].getElementsByTagName("rol")[0].textContent;
+
+                if(usuario == nombreXML && password == passwordXML){
+                    encontrado = true;
+                    rol = rolXML;
+                }
+            }
+
+            if(encontrado == true){
+                mensaje.innerHTML = "Bienvenido " + usuario + ", tu rol es: " + rol;
+                mensaje.style.color = "green";
+            }else{
+                mensaje.innerHTML = "Usuario o contraseña incorrectos";
+                mensaje.style.color = "red";
+            }
+        })
+        .catch(function(error){
+            mensaje.innerHTML = "No se pudo cargar el archivo usuarios.xml";
+            mensaje.style.color = "red";
+            console.log(error);
+        });
+    });
+
+
+    
+}
+

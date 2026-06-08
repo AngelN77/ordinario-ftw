@@ -3,8 +3,9 @@
     <usuario>
         <nombre>angel</nombre>
         <password>12345</password>
-        <rol>admin</rol>
+        <rol>administrador</rol>
     </usuario>
+
     <usuario>
         <nombre>cliente</nombre>
         <password>postres</password>

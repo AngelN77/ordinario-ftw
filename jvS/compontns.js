@@ -1,6 +1,6 @@
 var menuHTML = `
 <header>
-    <h2>Postres Caseros</h2>
+    <h2>Postres ricos y deliciosos</h2>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="catalogo.html">Catálogo</a>
@@ -12,7 +12,7 @@ var menuHTML = `
 
 var pieHTML = `
 <footer>
-    <p>Proyecto de Fundamentos de Tecnologías Web</p>
+    <p></p>
 </footer>`;
 
 function cargarMenuYPie(){
