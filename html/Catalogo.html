@@ -3,64 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de postres</title>
+    <title>Catalogo</title>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body data-pagina="catalogo">
+
     <div id="menu"></div>
 
-    <main>
-        <section class="caja">
-            <h1>Catálogo</h1>
-            <p>Busca postres usando los filtros.</p>
+    <h1>Catalogo de postres</h1>
+    <p>En esta pagina puedes buscar postres usando filtros.</p>
 
-            <form class="formulario" id="formFiltros">
-                <label for="buscar">Buscar por nombre:</label>
-                <input type="text" id="buscar" placeholder="Ejemplo: flan">
+    <h2>Filtros</h2>
 
-                <label for="categoria">Categoría:</label>
-                <select id="categoria">
-                    <option value="todos">Todos</option>
-                    <option value="Pastel">Pastel</option>
-                    <option value="Gelatina">Gelatina</option>
-                    <option value="Galleta">Galleta</option>
-                    <option value="Flan">Flan</option>
-                </select>
+    <form id="formFiltros">
+        <p>Buscar por nombre:</p>
+        <input type="text" id="buscar" placeholder="Ejemplo flan">
 
-                <label for="precio">Precio máximo:</label>
-                <input type="range" id="precio" min="20" max="100" value="100">
-                <p>Precio seleccionado: $<span id="precioTexto">100</span></p>
+        <p>Categoria:</p>
+        <select id="categoria">
+            <option value="todos">Todos</option>
+            <option value="Pastel">Pastel</option>
+            <option value="Gelatina">Gelatina</option>
+            <option value="Galleta">Galleta</option>
+            <option value="Flan">Flan</option>
+        </select>
 
-                <label class="check">
-                    <input type="checkbox" id="sinAzucar"> Solo sin azúcar
-                </label>
+        <p>Precio maximo:</p>
+        <input type="range" id="precio" min="20" max="100" value="100">
+        <p>Precio seleccionado: $<span id="precioTexto">100</span></p>
+        
 
-                <button type="button" id="btnLimpiar">Limpiar filtros</button>
-            </form>
-        </section>
+        <p>
+            <input type="checkbox" id="sinAzucar">
+            Solo sin azucar
+        </p>
 
-        <section class="caja">
-            <h2>Resultados en tarjetas</h2>
-            <div id="listaPostres" class="contenedor-postres"></div>
-        </section>
+        <button type="button" id="btnLimpiar">Limpiar</button>
+    </form>
 
-        <section class="caja">
-            <h2>Tabla de postres</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Categoría</th>
-                        <th>Precio</th>
-                        <th>Sin azúcar</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaPostres"></tbody>
-            </table>
-        </section>
-    </main>
+    <h2>Postres encontrados</h2>
+    <div id="listaPostres"></div>
+
+    <h2>Tabla de postres</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+                <th>Sin azucar</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPostres"></tbody>
+    </table>
 
     <div id="pie"></div>
+
     <script src="../jvS/componentes.js"></script>
     <script src="../jvS/app.js"></script>
 </body>

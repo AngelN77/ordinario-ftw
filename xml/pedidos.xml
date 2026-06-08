@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pedidos.xsd">
+    <pedido>
+        <cliente>Maria</cliente>
+        <postre>Pastel de chocolate</postre>
+        <cantidad>2</cantidad>
+        <estado>Pendiente</estado>
+    </pedido>
+    <pedido>
+        <cliente>Carlos</cliente>
+        <postre>Flan napolitano</postre>
+        <cantidad>1</cantidad>
+        <estado>Entregado</estado>
+    </pedido>
+    <pedido>
+        <cliente>Ana</cliente>
+        <postre>Pay de limón</postre>
+        <cantidad>3</cantidad>
+        <estado>Pendiente</estado>
+    </pedido>
+</pedidos>
+ 

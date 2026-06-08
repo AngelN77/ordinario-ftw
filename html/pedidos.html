@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body data-pagina="pedidos">
+
+    <div id="menu"></div>
+
+    <h1>Pedidos</h1>
+    <p>Aqui se muestran pedidos de postres.</p>
+
+    <h2>Agregar pedido</h2>
+
+    <form id="formPedido">
+        <p>Nombre del cliente:</p>
+        <input type="text" id="nombreCliente">
+
+        <p>Postre:</p>
+        <input type="text" id="postrePedido">
+
+        <p>Cantidad:</p>
+        <input type="number" id="cantidadPedido" min="1">
+
+        <br><br>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <p id="mensajePedido"></p>
+
+    <h2>Filtrar pedidos</h2>
+    <select id="estadoPedido">
+        <option value="todos">Todos</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Entregado">Entregado</option>
+    </select>
+
+    <h2>Tabla de pedidos</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Postre</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPedidos"></tbody>
+    </table>
+
+    <div id="pie"></div>
+
+    <script src="../jvS/componentes.js"></script>
+    <script src="../jvS/app.js"></script>
+</body>
+</html> 

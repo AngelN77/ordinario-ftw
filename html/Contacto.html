@@ -7,40 +7,34 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body data-pagina="contacto">
+
     <div id="menu"></div>
 
-    <main>
-        <section class="caja">
-            <h1>Contacto</h1>
-            <p>Formulario para pedir información sobre los postres.</p>
+    <h1>Contacto</h1>
+    <p>Llena el formulario para mandar un mensaje.</p>
 
-            <form id="formContacto" class="formulario">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
+    <form id="formContacto">
+        <p>Nombre:</p>
+        <input type="text" id="nombreContacto">
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" required>
+        <p>Correo:</p>
+        <input type="email" id="correoContacto">
 
-                <p>Tipo de pedido:</p>
-                <label><input type="radio" name="tipo" value="normal" checked> Normal</label>
-                <label><input type="radio" name="tipo" value="evento"> Para evento</label>
+        <p>Tipo de pedido:</p>
+        <input type="radio" name="tipo" value="normal"> Normal
+        <input type="radio" name="tipo" value="urgente"> Urgente
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" rows="5" required></textarea>
+        <p>Mensaje:</p>
+        <textarea id="mensajeContacto"></textarea>
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="mensajeContacto"></p>
-        </section>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
 
-        <article class="caja">
-            <h2>Información</h2>
-            <p>Atendemos pedidos de pasteles, flanes, gelatinas y galletas.</p>
-            <blockquote>"Un postre pequeño también puede mejorar el día."</blockquote>
-        </article>
-    </main>
+    <p id="mensajeContactoFinal"></p>
 
     <div id="pie"></div>
+
     <script src="../jvS/componentes.js"></script>
     <script src="../jvS/app.js"></script>
 </body>
