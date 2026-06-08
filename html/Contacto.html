@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body data-pagina="contacto">
+    <div id="menu"></div>
+
+    <main>
+        <section class="caja">
+            <h1>Contacto</h1>
+            <p>Formulario para pedir información sobre los postres.</p>
+
+            <form id="formContacto" class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" required>
+
+                <p>Tipo de pedido:</p>
+                <label><input type="radio" name="tipo" value="normal" checked> Normal</label>
+                <label><input type="radio" name="tipo" value="evento"> Para evento</label>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="mensajeContacto"></p>
+        </section>
+
+        <article class="caja">
+            <h2>Información</h2>
+            <p>Atendemos pedidos de pasteles, flanes, gelatinas y galletas.</p>
+            <blockquote>"Un postre pequeño también puede mejorar el día."</blockquote>
+        </article>
+    </main>
+
+    <div id="pie"></div>
+    <script src="../jvS/componentes.js"></script>
+    <script src="../jvS/app.js"></script>
+</body>
+</html>

@@ -3,53 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulce Rincón | Catálogo</title>
+    <title>Catálogo de postres</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <script src="../jvS/componentes.js" defer></script>
-    <script src="../jvS/app.js" defer></script>
 </head>
 <body data-pagina="catalogo">
-    <div id="menuPrincipal"></div>
-    <main id="contenido" class="contenedor">
-        <section aria-labelledby="tituloCatalogo">
-            <h2 id="tituloCatalogo">Catálogo de postres</h2>
-            <p>Busca, filtra por categoría, limita por precio y activa la opción de postres sin azúcar.</p>
-            <div id="zonaErrores" class="zona-error" role="alert"></div>
+    <div id="menu"></div>
 
-            <form class="filtros" aria-label="Filtros del catálogo">
-                <div class="fila-form">
-                    <div>
-                        <label for="buscar">Buscar postre</label>
-                        <input type="search" id="buscar" placeholder="Ejemplo: chocolate">
-                    </div>
-                    <div>
-                        <label for="categoria">Categoría</label>
-                        <select id="categoria"><option>Todos</option></select>
-                    </div>
-                    <div>
-                        <label for="precio">Precio máximo: <span id="valorPrecio">$100</span></label>
-                        <input type="range" id="precio" min="30" max="100" value="100">
-                    </div>
-                    <div>
-                        <label><input type="checkbox" id="sinAzucar"> Solo sin azúcar</label>
-                    </div>
-                </div>
+    <main>
+        <section class="caja">
+            <h1>Catálogo</h1>
+            <p>Busca postres usando los filtros.</p>
+
+            <form class="formulario" id="formFiltros">
+                <label for="buscar">Buscar por nombre:</label>
+                <input type="text" id="buscar" placeholder="Ejemplo: flan">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="Pastel">Pastel</option>
+                    <option value="Gelatina">Gelatina</option>
+                    <option value="Galleta">Galleta</option>
+                    <option value="Flan">Flan</option>
+                </select>
+
+                <label for="precio">Precio máximo:</label>
+                <input type="range" id="precio" min="20" max="100" value="100">
+                <p>Precio seleccionado: $<span id="precioTexto">100</span></p>
+
+                <label class="check">
+                    <input type="checkbox" id="sinAzucar"> Solo sin azúcar
+                </label>
+
+                <button type="button" id="btnLimpiar">Limpiar filtros</button>
             </form>
-            <p id="totalResultados" class="info">0 resultados encontrados</p>
-            <div id="listaPostres" class="grid"></div>
         </section>
 
-        <section aria-labelledby="tituloTabla">
-            <h2 id="tituloTabla">Datos recuperados del XML</h2>
-            <div class="tabla-wrap">
-                <table>
-                    <caption>Tabla filtrada dinámicamente</caption>
-                    <thead><tr><th>ID</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Calorías</th><th>Sin azúcar</th></tr></thead>
-                    <tbody id="tablaPostres"></tbody>
-                </table>
-            </div>
+        <section class="caja">
+            <h2>Resultados en tarjetas</h2>
+            <div id="listaPostres" class="contenedor-postres"></div>
+        </section>
+
+        <section class="caja">
+            <h2>Tabla de postres</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Sin azúcar</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPostres"></tbody>
+            </table>
         </section>
     </main>
-    <div id="piePagina"></div>
+
+    <div id="pie"></div>
+    <script src="../jvS/componentes.js"></script>
+    <script src="../jvS/app.js"></script>
 </body>
 </html>
