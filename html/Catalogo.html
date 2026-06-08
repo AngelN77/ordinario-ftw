@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Rincón | Catálogo</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../jvS/componentes.js" defer></script>
+    <script src="../jvS/app.js" defer></script>
+</head>
+<body data-pagina="catalogo">
+    <div id="menuPrincipal"></div>
+    <main id="contenido" class="contenedor">
+        <section aria-labelledby="tituloCatalogo">
+            <h2 id="tituloCatalogo">Catálogo de postres</h2>
+            <p>Busca, filtra por categoría, limita por precio y activa la opción de postres sin azúcar.</p>
+            <div id="zonaErrores" class="zona-error" role="alert"></div>
+
+            <form class="filtros" aria-label="Filtros del catálogo">
+                <div class="fila-form">
+                    <div>
+                        <label for="buscar">Buscar postre</label>
+                        <input type="search" id="buscar" placeholder="Ejemplo: chocolate">
+                    </div>
+                    <div>
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria"><option>Todos</option></select>
+                    </div>
+                    <div>
+                        <label for="precio">Precio máximo: <span id="valorPrecio">$100</span></label>
+                        <input type="range" id="precio" min="30" max="100" value="100">
+                    </div>
+                    <div>
+                        <label><input type="checkbox" id="sinAzucar"> Solo sin azúcar</label>
+                    </div>
+                </div>
+            </form>
+            <p id="totalResultados" class="info">0 resultados encontrados</p>
+            <div id="listaPostres" class="grid"></div>
+        </section>
+
+        <section aria-labelledby="tituloTabla">
+            <h2 id="tituloTabla">Datos recuperados del XML</h2>
+            <div class="tabla-wrap">
+                <table>
+                    <caption>Tabla filtrada dinámicamente</caption>
+                    <thead><tr><th>ID</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Calorías</th><th>Sin azúcar</th></tr></thead>
+                    <tbody id="tablaPostres"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <div id="piePagina"></div>
+</body>
+</html>
