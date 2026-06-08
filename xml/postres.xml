@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <postres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="postres.xsd">
     <postre>
-        <nombre>Pastel de chocolate</nombre>
+        <nombre>pastel chocolate</nombre>
         <categoria>Pastel</categoria>
         <precio>80</precio>
         <sinAzucar>false</sinAzucar>
-        <imagen>../img/chocolate.svg</imagen>
+        <imagen>../imagenes/pastelchocolate.jpg</imagen>
         <alt>Imagen de pastel de chocolate</alt>
         <descripcion>Pastel sencillo con betún de chocolate.</descripcion>
     </postre>
+
     <postre>
-        <nombre>Flan napolitano</nombre>
+        <nombre>flan </nombre>
         <categoria>Flan</categoria>
         <precio>45</precio>
         <sinAzucar>false</sinAzucar>
-        <imagen>../img/flan.svg</imagen>
+        <imagen>../imagenes/flan.jpg</imagen>
         <alt>Imagen de flan napolitano</alt>
         <descripcion>Flan casero con caramelo.</descripcion>
     </postre>
+
     <postre>
         <nombre>Gelatina de fresa</nombre>
         <categoria>Gelatina</categoria>
         <precio>30</precio>
         <sinAzucar>true</sinAzucar>
-        <imagen>../img/gelatina.svg</imagen>
+        <imagen>../imagenes/gelatina.jpg</imagen>
         <alt>Imagen de gelatina de fresa</alt>
         <descripcion>Gelatina ligera sabor fresa.</descripcion>
     </postre>
+
     <postre>
         <nombre>Brownie</nombre>
         <categoria>Galleta</categoria>
         <precio>35</precio>
         <sinAzucar>false</sinAzucar>
-        <imagen>../img/brownie.svg</imagen>
+        <imagen>../imagenes/brownie.jpg</imagen>
         <alt>Imagen de brownie</alt>
         <descripcion>Brownie pequeño con chocolate.</descripcion>
     </postre>
+
     <postre>
-        <nombre>Pay de limón</nombre>
+        <nombre>pay de limon</nombre>
         <categoria>Pastel</categoria>
         <precio>55</precio>
         <sinAzucar>false</sinAzucar>
-        <imagen>../img/paylimon.svg</imagen>
+        <!-- <imagen>../imagenes/paydelimon.jp</imagen> -->
+        <imagen>../imagenes/paylimon.jpg</imagen>
         <alt>Imagen de pay de limón</alt>
         <descripcion>Pay frío con sabor a limón.</descripcion>
     </postre>
